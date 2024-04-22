@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Great Irish Potato Famine</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #333;
+      color: white;
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav {
+      background-color: #f2f2f2;
+      padding: 10px;
+    }
+
+    nav a {
+      color: black;
+      text-decoration: none;
+      margin-right: 10px;
+    }
+
+    main {
+      padding: 20px;
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      padding: 10px;
+      text-align: center;
+    }
+
+    .tabcontent {
+      display: none;
+      padding: 10px;
+      border: 1px solid #ccc;
+    }
+
+    .tabcontent.active {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>The Great Irish Potato Famine</h1>
+  </header>
+
+  <nav>
+    <a href="#history" class="active">History</a>
+    <a href="#causes">Causes</a>
+    <a href="#effects">Effects</a>
+    <a href="#sources">Sources</a>
+  </nav>
+
+  <main>
+    <div id="history" class="tabcontent active">
+      <h2>History</h2>
+      <p>The Great Irish Potato Famine, also known as the Great Hunger, was a period of mass starvation, disease, and emigration in Ireland between 1845 and 1852. It was primarily a consequence of failures in the potato crop, which was a staple food for most of the Irish population at the time.</p>
+    </div>
+
+    <div id="causes" class="tabcontent">
+      <h2>Causes</h2>
+      <p>The primary cause of the famine was the potato blight, a fungal disease that destroyed the potato crops. Other contributing factors included over-reliance on a single crop, poverty, and a lack of government support and infrastructure to deal with the crisis.</p>
+    </div>
+
+    <div id="effects" class="tabcontent">
+      <h2>Effects</h2>
+      <p>The famine led to the deaths of approximately one million people and caused another million to emigrate, primarily to the United States and Britain. It had a profound impact on Irish society and culture, and its effects are still felt today.</p>
+    </div>
+
+    <div id="sources" class="tabcontent">
+      <h2>Sources</h2>
+      <p>For more information on the Great Irish Potato Famine, please consult the following sources:</p>
+      <ul>
+        <li>Cullen, W.E. (1994). The Great Irish Famine. Oxford University Press.</li>
+        <li>O Grada, C. (2009). Famine: A Short History of the Most Devastating Catastrophe in the History of Human Civilization. Princeton University Press.</li>
+        <li>Laybourn, C. (2000). The Great Irish Famine. Routledge.</li>
+      </ul>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2022 The Great Irish Potato Famine Website</p>
+  </footer>
+
+  <script>
+    const tabs = document.querySelectorAll('.tabcontent');
+    const links = document.querySelectorAll('nav a');
+
+    links.forEach(link => {
+      link.addEventListener('click', e => {
+        e.preventDefault();
+        const target = document.querySelector(e.target.hash);
+        tabs.forEach(tab => {
+          tab.classList.remove('active');
+        });
+        target.classList.add('active');
+      });
+    });
+  </script>
+</body>
+</html>
